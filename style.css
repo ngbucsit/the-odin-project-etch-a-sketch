@@ -1,0 +1,22 @@
+* {
+  margin: 0;
+}
+
+h1 {
+  text-align: center;
+}
+
+#container {
+  margin: 0 auto;
+  display: flex;
+  width: 600px;
+  height: 600px;
+  justify-content: center;
+  align-items: stretch;
+  flex-wrap: wrap;
+}
+
+.box {
+  flex: 1 0 5.9%;
+  border: 1px solid #000;
+}
