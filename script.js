@@ -7,3 +7,24 @@ for (i = 1; i <= 16; i++) {
     container.appendChild(div);
   }
 }
+
+const boxes = document.querySelectorAll(".box");
+
+let isMouseDown = false;
+
+boxes.forEach((box) => {
+  box.addEventListener("mousedown", (e) => {
+    e.preventDefault();
+    isMouseDown = true;
+  });
+  box.addEventListener("mousemove", (e) => {
+    e.preventDefault();
+    if (isMouseDown) {
+      e.target.style["background-color"] = "#000";
+    }
+  });
+});
+
+window.addEventListener("mouseup", (e) => {
+  isMouseDown = false;
+});
